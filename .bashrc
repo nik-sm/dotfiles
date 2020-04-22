@@ -1,3 +1,6 @@
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
 # Unlimited history
 # http://stackoverflow.com/questions/9457233/unlimited-bash-history
 HISTCONTROL=ignoreboth
@@ -15,7 +18,8 @@ shopt -s globstar
 export VISUAL=vim
 export EDITOR=vim
 
-PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\] $? \$ '
+#PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\] $? \$ '
+PS1='\[\033[01;32m\]\u@\h \[\033[00m\]| \[\033[01;34m\]\W \[\033[00m\]| \[\033[01;33m\]$? \[\033[00m\]\n$ '
 
 alias ls='ls --color=auto'
 alias ll='ls -alF'
@@ -34,7 +38,7 @@ fi
 # Setup ssh identity
 eval $(ssh-agent)
 # NOTE - set path to desired identity file
-ssh-add ~/.ssh/niklas_desktop_wsl_rsa
+ssh-add ~/.ssh/niklas_desktop_ubuntu_rsa
 
 
 # NOTE - corresponds to vimrc line: set undodir=~/.vim/undodir
