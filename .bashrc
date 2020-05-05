@@ -31,6 +31,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.inputrc ]; then
+    bind -f ~/.inputrc
+fi
+
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
@@ -38,7 +42,7 @@ fi
 # Setup ssh identity
 eval $(ssh-agent)
 # NOTE - set path to desired identity file
-ssh-add ~/.ssh/niklas_desktop_ubuntu_rsa
+ssh-add ~/.ssh/discovery_rsa
 
 
 # NOTE - corresponds to vimrc line: set undodir=~/.vim/undodir
