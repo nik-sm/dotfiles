@@ -73,8 +73,10 @@ function! s:build_go_files()
 endfunction
 
 
+
 color delek "Chosen so visual mode does not obscure text
 " https://stackoverflow.com/questions/43814949/cant-read-when-vim-neovim-highlight-same-color-as-text
+
 
 set backspace=indent,eol,start " using backspace in insert mode can now cross these additional boundaries
 set number " show line numbers
@@ -106,7 +108,7 @@ set laststatus=2
 set ignorecase
 set smartcase
 set undofile
-set undodir=~/.vim/undodir "NOTE - corresponds to ~/.bashrc, `mkdir -p ~/.vim/undodir`
+set undodir=~/.vim/undodir "in ~/.bashrc, add `mkdir -p ~/.vim/undodir`
 set undolevels=1000
 set undoreload=10000
 "set clipboard=unnamed
@@ -127,6 +129,7 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 nmap <TAB> mzi<CR><ESC>`z
 nmap <CR> mzo<ESC>`z
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 nmap <SPACE> i<SPACE><ESC>
 inoremap jk <ESC>
 inoremap jK <ESC>
@@ -237,6 +240,7 @@ endfunction
 "" <make some changes>
 "" ESC  followed
 
+" ALE
 nmap <Leader>b :ALEFix<CR>
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1

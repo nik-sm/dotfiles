@@ -26,6 +26,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias grep='grep --color=auto'
+alias cp='cp -i' # prompt before clobber
+alias mv='mv -i' # prompt before clobber
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
