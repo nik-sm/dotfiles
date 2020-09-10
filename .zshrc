@@ -71,6 +71,10 @@ setopt incappendhistory  # Immediately append to the history file, not just when
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Using ^<SPACE> will accept the zsh-autosuggestions suggested line
+# see https://github.com/zsh-users/zsh-autosuggestions#key-bindings
+bindkey '^ ' autosuggest-accept
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -129,3 +133,5 @@ alias gb="git branch -avv"
 alias ga="git add"
 alias g="git"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
