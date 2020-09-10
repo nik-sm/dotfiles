@@ -73,7 +73,8 @@ setopt incappendhistory  # Immediately append to the history file, not just when
 
 # Using ^<SPACE> will accept the zsh-autosuggestions suggested line
 # see https://github.com/zsh-users/zsh-autosuggestions#key-bindings
-bindkey '^ ' autosuggest-accept
+# NOTE - this keybinding doesn't seem to work in tmux; stick to ^E
+# bindkey '^ ' autosuggest-accept
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
