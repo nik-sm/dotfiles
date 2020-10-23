@@ -12,3 +12,5 @@ python3 -m virtualenv ~/.venv
 source ~/.venv
 pip install -r ~/.requirements.txt
 deactivate
+
+~/.fzf/install

@@ -10,6 +10,7 @@
     ~/.bash_profile:
     ~/.bashrc:
     ~/.config:
+    ~/.fzf:
     ~/.gitconfig:
     ~/.inputrc:
     ~/.oh-my-zsh:
