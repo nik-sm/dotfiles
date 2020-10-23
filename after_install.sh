@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -eux
 
 apt update -y
 xargs -a apt_packages.txt apt install -y

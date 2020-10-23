@@ -21,6 +21,8 @@
     ~/.zshrc:
 
 - shell:
+  - command -v python3 || apt install -y python3 
+  - command -v pip3 || apt install -y python3-pip
   - git submodule sync --recursive
   - git update-submodules
   - bash ~/.after_install.sh
