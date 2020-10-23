@@ -25,4 +25,6 @@
   - command -v pip3 || apt install -y python3-pip
   - git submodule sync --recursive
   - git update-submodules
-  - bash ~/.after_install.sh
+  - command: bash ~/.after_install.sh
+    stdout: true
+    stderr: true
