@@ -1,0 +1,25 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.after_install.sh:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.config:
+    ~/.gitconfig:
+    ~/.inputrc:
+    ~/.oh-my-zsh:
+    ~/.requirements.txt:
+    ~/.shell:
+    ~/.tmux.conf:
+    ~/.vimrc:
+    ~/.zshrc:
+
+- shell:
+  - git submodule sync --recursive
+  - git update-submodules
+  - bash ~/.after_install.sh

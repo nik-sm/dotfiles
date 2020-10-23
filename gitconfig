@@ -1,0 +1,52 @@
+[alias]
+	st = status -sb
+	versions = tag -l --sort=version:refname
+	b = branch -vv --all
+	a = add
+	c = commit -v
+  # save = commit -a -m "Save"
+	d = diff
+	f = fetch --all --tags --prune
+	update-submodules = submodule update --init --recursive
+	upgrade-submodules = submodule update --init --remote
+	ctags = ! "ctg() { trap \"rm -f .git/tags.$$\" EXIT; ctags --tag-relative -Rf.git/tags.$$ --exclude=.git; mv .git/tags.$$ .git/tags; }; ctg"
+	targz = ! "targz() { git archive --format tar.gz --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; targz"
+	zip = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; zip"
+
+[diff]
+	mnemonicPrefix = true
+
+[color]
+	ui = auto
+
+[color "grep"]
+	match = cyan bold
+	selected = blue
+	context = normal
+	filename = magenta
+	linenumber = green
+	separator = yellow
+	function = blue
+
+[pretty]
+	line = "%C(auto)%h %<|(60,trunc)%s %C(green)%ad%C(auto)%d"
+	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ad%n %C(auto)%d%n"
+
+[pull]
+	ff = only
+
+[mergetool]
+	keepBackup = false
+
+[push]
+	default = upstream
+
+[grep]
+	lineNumber = true
+
+[user]
+	useConfigOnly = true
+
+# Allow local customizations in the .gitconfig_local file
+[include]
+	path = ~/.gitconfig_local

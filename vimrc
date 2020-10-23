@@ -108,13 +108,13 @@ set laststatus=2
 set ignorecase
 set smartcase
 set undofile
-set undodir=~/.vim/undodir "in ~/.bashrc, add `mkdir -p ~/.vim/undodir`
+!mkdir -p ~/.vim_backup
+set undodir=~/.vim/undodir
 set undolevels=1000
 set undoreload=10000
 "set clipboard=unnamed
 "set textwidth=100 "default is 78? 79? 80?
 "set colorcolumn=80
-
 
 "http://vimdoc.sourceforge.net/htmldoc/options.html#'autowrite'
 "useful for :make, or <C-z>
