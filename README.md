@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nik-sm/dotfiles.svg?branch=master)](https://travis-ci.org/nik-sm/dotfiles)
+[![Build Status](https://travis-ci.com/nik-sm/dotfiles.svg?branch=master)](https://travis-ci.com/nik-sm/dotfiles)
 
 # Install
 
