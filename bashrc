@@ -59,4 +59,4 @@ export PATH=$PATH:/usr/local/go/bin
 
 source ~/.shell/aliases.sh
 
-ulimit -n 50000
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

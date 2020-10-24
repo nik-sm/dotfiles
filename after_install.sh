@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+
+[[ $# -eq 1 ]] || { echo "missing arg: <home dir>" >&2; exit 1; }
+HOME=$1
+
 set -eux
 
 apt update -y
@@ -11,7 +15,7 @@ python3 -m virtualenv ~/.venv
 # make ssh key if needed
 mkdir -p ~/.ssh
 [ -f ~/.ssh/id_rsa ] || ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N ""
-chmod -R 400 ~/.ssh/
+chmod -R 600 ~/.ssh/
 
 # python packages for vim ALE
 source ~/.venv/bin/activate

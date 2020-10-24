@@ -11,14 +11,18 @@
     ~/.bashrc:
       force: true
     ~/.config:
+      force: true
     ~/.fzf:
     ~/.gitconfig:
+      force: true
     ~/.inputrc:
     ~/.oh-my-zsh:
     ~/.requirements.txt:
     ~/.shell:
     ~/.tmux.conf:
+      force: true
     ~/.vimrc:
+      force: true
     ~/.zshrc:
 
 - shell:

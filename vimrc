@@ -108,7 +108,9 @@ set laststatus=2
 set ignorecase
 set smartcase
 set undofile
-!mkdir -p ~/.vim_backup
+if !isdirectory("~/.vim/undodir")
+  call mkdir("~/.vim/undodir", "p")
+endif
 set undodir=~/.vim/undodir
 set undolevels=1000
 set undoreload=10000

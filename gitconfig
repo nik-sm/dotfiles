@@ -46,6 +46,8 @@
 
 [user]
 	useConfigOnly = true
+	email = niklas.sm+github@gmail.com
+	name = Niklas
 
 # Allow local customizations in the .gitconfig_local file
 [include]
