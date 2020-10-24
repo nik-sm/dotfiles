@@ -9,8 +9,14 @@ git clone https://github.com/nik-sm/dotfiles
 
 # Manual Test
 
-```bash
-docker build --no-cache -t test .
+Create image with dotfiles installed:
+```
+docker build -t test .
+```
+
+Run container and check things look right:
+```
+docker run -ti --rm test zsh
 ```
 
 # Acknowledgements

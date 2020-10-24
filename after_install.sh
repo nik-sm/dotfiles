@@ -17,3 +17,5 @@ pip install -r ~/.requirements.txt
 deactivate
 
 ~/.fzf/install
+
+chsh -s $(which zsh)
