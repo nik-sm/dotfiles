@@ -16,9 +16,6 @@
 [submodule "vim/bundle/vim-go"]
 	path = vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh
 [submodule "fzf"]
 	path = fzf
 	url = https://github.com/junegunn/fzf
