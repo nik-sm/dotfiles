@@ -18,6 +18,6 @@ source ~/.venv/bin/activate
 pip install -r ~/.requirements.txt
 deactivate
 
-~/.fzf/install
+~/.fzf/install --all
 
 chsh -s $(which zsh)
