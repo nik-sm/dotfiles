@@ -138,6 +138,7 @@ inoremap jK <ESC>
 inoremap Jk <ESC>
 inoremap JK <ESC>
 inoremap <C-z> <ESC><C-z>
+nmap ' `
 
 " * and # do not respect case sensitivity options, so remap them to literal
 " searches

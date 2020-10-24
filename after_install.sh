@@ -15,7 +15,7 @@ python3 -m virtualenv ~/.venv
 # make ssh key if needed
 mkdir -p ~/.ssh
 [ -f ~/.ssh/id_rsa ] || ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N ""
-chmod -R 600 ~/.ssh/
+chmod -R 700 ~/.ssh/
 
 # python packages for vim ALE
 source ~/.venv/bin/activate
