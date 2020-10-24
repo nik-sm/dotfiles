@@ -1,11 +1,7 @@
-FROM ubuntu:latest
+FROM python:3.8
 
-RUN apt-get update -y && apt-get install -y git
+ADD . /dotfiles
 
-WORKDIR /home/niklas
-
-RUN git clone https://github.com/nik-sm/dotfiles.git
-
-WORKDIR dotfiles
+WORKDIR /dotfiles
 
 RUN ./install

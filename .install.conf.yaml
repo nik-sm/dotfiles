@@ -9,6 +9,7 @@
     ~/.after_install.sh:
     ~/.bash_profile:
     ~/.bashrc:
+      force: true
     ~/.config:
     ~/.fzf:
     ~/.gitconfig:
@@ -25,6 +26,3 @@
   - command -v pip3 || apt install -y python3-pip
   - git submodule sync --recursive
   - git update-submodules
-  - command: bash ~/.after_install.sh
-    stdout: true
-    stderr: true
