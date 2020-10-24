@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/nik-sm/dotfiles
-./install
+./install # 2nd stage (apt packages, etc) requires sudo
 ```
 
 # Manual Test
