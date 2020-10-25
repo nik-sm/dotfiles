@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-source $ZSH/oh-my-zsh.sh
 
 PROMPT='%(?.%F{green}√.%F{red}%?)%f %B%F{240}%1~%f%b %F{yellow}%#%f '
 
@@ -26,6 +25,9 @@ plugins=(
   zsh-syntax-highlighting
   colored-man-pages
 )
+
+source $ZSH/oh-my-zsh.sh
+
 export VISUAL=vim
 export EDITOR=$VISUAL
 
