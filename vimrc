@@ -109,7 +109,7 @@ set ignorecase
 set smartcase
 set undofile
 if !isdirectory("~/.vim/undodir")
-  call mkdir("~/.vim/undodir", "p")
+  call mkdir($HOME . "/.vim/undodir", "p")
 endif
 set undodir=~/.vim/undodir
 set undolevels=1000
