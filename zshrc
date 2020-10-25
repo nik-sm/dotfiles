@@ -22,7 +22,6 @@ setopt incappendhistory  # Immediately append to the history file, not just when
 setopt extendedhistory   # Save eachy command's timestamp and duration as:  `: <began>:<duration>;<command>`
 
 plugins=(
-  git
   zsh-autosuggestions
   zsh-syntax-highlighting
   colored-man-pages

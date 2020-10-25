@@ -8,6 +8,12 @@ alias gdc="git diff --cached"
 alias gb="git branch -avv"
 alias ga="git add"
 alias g="git"
+ggg() {
+  [[ -z $1 ]] && { echo "missing commit message" >&2; exit 1; }
+  git add -u
+  git commit -m $1
+  git push
+}
 
 # ls
 alias ls='ls --color=auto'
