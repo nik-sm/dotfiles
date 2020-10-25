@@ -28,6 +28,13 @@ alias mv='mv -i'
 # misc
 alias grep="rg"
 alias fzf="fzf --height 40% --layout reverse --preview 'head -n10 {}' --preview-window down:10"
+cdl() {
+  [[ -z $1 ]] && { echo "missing destination message" >&2; exit 1; }
+  cd $1
+  ls -lah
+}
+
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
