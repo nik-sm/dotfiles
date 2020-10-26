@@ -9,7 +9,7 @@ apt update -y
 xargs -a apt_packages.txt apt install -y
 
 # global python packages
-pip3 install virtualenv tldr
+python3 -m pip install virtualenv tldr
 python3 -m virtualenv ~/.venv
 
 # make ssh key if needed
