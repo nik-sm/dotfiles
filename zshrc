@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-
-PROMPT='%(?.%F{green}√.%F{red}%?)%f %B%F{240}%1~%f%b %F{yellow}%#%f '
-
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
@@ -27,6 +24,8 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+PROMPT='%(?.%F{green}√.%F{red}%?)%f %F{blue}%m%f %B%F{240}%1~%f%b %F{yellow}%#%f '
 
 export VISUAL=vim
 export EDITOR=$VISUAL
