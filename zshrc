@@ -31,7 +31,7 @@ source $ZSH/oh-my-zsh.sh
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-pgrep ssh-agent || eval `ssh-agent`
+eval `ssh-agent`
 ssh-add ~/.ssh/id_rsa
 
 source ~/.shell/aliases.sh

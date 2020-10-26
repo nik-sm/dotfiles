@@ -51,7 +51,7 @@ fi
 
 # TODO - this leaves 1 lingering ssh-agent process per closed terminal session
 # any forwarded identities will still be available from those agents, which is a minor security risk
-pgrep ssh-agent || eval `ssh-agent`
+eval `ssh-agent`
 ssh-add ~/.ssh/id_rsa
 
 # Golang
