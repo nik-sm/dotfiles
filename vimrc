@@ -80,7 +80,7 @@ color delek "Chosen so visual mode does not obscure text
 
 set backspace=indent,eol,start " using backspace in insert mode can now cross these additional boundaries
 set number " show line numbers
-set rnu " show the current line number accurately, and then show relative line numbers counting outwards (good for precise line movements like '12j')
+" set rnu " show the current line number accurately, and then show relative line numbers counting outwards (good for precise line movements like '12j')
 set tabstop=2       " The width of a TAB is set to 2.
                     " Still it is a \t. It is just that
                     " Vim will interpret it to be having

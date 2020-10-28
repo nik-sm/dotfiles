@@ -35,4 +35,6 @@ ssh-add ~/.ssh/id_rsa
 
 source ~/.shell/aliases.sh
 
+PATH=$PATH:~/.local/bin
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
