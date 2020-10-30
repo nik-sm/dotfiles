@@ -26,8 +26,8 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 # misc
-alias grep="rg"
-alias fzf="fzf --height 40% --layout reverse --preview 'head -n10 {}' --preview-window down:10"
+command -v rg > /dev/null && alias grep="rg"
+command -v fzf > /dev/null && alias fzf="fzf --height 40% --layout reverse --preview 'head -n10 {}' --preview-window down:10"
 cdl() {
   [[ -z $1 ]] && { echo "missing destination message" >&2; exit 1; }
   cd $1

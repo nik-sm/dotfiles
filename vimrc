@@ -108,7 +108,7 @@ set laststatus=2
 set ignorecase
 set smartcase
 set undofile
-if !isdirectory("~/.vim/undodir")
+if !isdirectory($HOME. "/.vim/undodir")
   call mkdir($HOME . "/.vim/undodir", "p")
 endif
 set undodir=~/.vim/undodir

@@ -5,4 +5,5 @@ ripgrep
 tmux
 tree
 universal-ctags
+zip
 zsh
