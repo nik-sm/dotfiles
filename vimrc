@@ -248,5 +248,16 @@ nmap <Leader>b :ALEFix<CR>
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 
+let g:ale_fixers = {
+\     '*': ['remove_trailing_lines', 'trim_whitespace'],
+\     'python': ['yapf', 'isort'],
+\     'json': ['jq'],
+\}
+
+let g:ale_linters = {
+\     'python': ['flake8'],
+\     'json': ['jsonlint'],
+\}
+
 " Keep gutter open always
 " let g:ale_sign_column_always = 1
