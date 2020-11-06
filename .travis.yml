@@ -3,8 +3,6 @@ dist: focal  # ubuntu 20.04
 python:
   - "3.8"
 
-sudo: false
-
 before_script:
   - mkdir -p ~/dotfiles-install-dir
 
