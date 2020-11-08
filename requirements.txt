@@ -2,3 +2,9 @@ yapf
 flake8
 isort
 pylint
+torch
+numpy
+scikit-image
+scikit-learn
+jupyter-contrib-nbextensions
+jupyter-nbextensions-configurator

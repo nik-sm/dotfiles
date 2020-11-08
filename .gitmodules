@@ -13,9 +13,6 @@
 [submodule "vim/bundle/julia-vim"]
 	path = vim/bundle/julia-vim
 	url = https://github.com/JuliaEditorSupport/julia-vim.git
-[submodule "vim/bundle/vim-go"]
-	path = vim/bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
 [submodule "fzf"]
 	path = fzf
 	url = https://github.com/junegunn/fzf
