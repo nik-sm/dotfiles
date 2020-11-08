@@ -55,8 +55,12 @@ eval `ssh-agent`
 ssh-add ~/.ssh/id_rsa
 
 # Golang
-export PATH=$PATH:/usr/local/go/bin
+# export PATH=$PATH:/usr/local/go/bin
 
 source ~/.shell/aliases.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+if [ -f ~/.bashrc_local_after ]; then
+      source ~/.bashrc_local_after
+fi

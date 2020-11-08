@@ -38,3 +38,7 @@ source ~/.shell/aliases.sh
 PATH=$PATH:~/.local/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [ -f ~/.zshrc_local_after ]; then
+      source ~/.zshrc_local_after
+fi
