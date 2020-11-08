@@ -1,1 +1,5 @@
 **/*.swp
+vim/undodir
+config/gcloud
+config/wslu
+config/htop

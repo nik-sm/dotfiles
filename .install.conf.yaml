@@ -21,12 +21,14 @@
     ~/.shell:
     ~/.tmux.conf:
       force: true
+    ~/.vim:
+      force: true
     ~/.vimrc:
       force: true
     ~/.zshrc:
 
 - shell:
-  - command -v python3 || apt install -y python3 
-  - command -v pip3 || apt install -y python3-pip
   - git submodule sync --recursive
   - git update-submodules
+  - command -v python3 || apt install -y python3 
+  - command -v pip3 || apt install -y python3-pip

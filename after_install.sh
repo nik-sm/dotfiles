@@ -20,6 +20,10 @@ chmod -R 700 ~/.ssh/
 # python packages for vim ALE
 source ~/.venv/bin/activate
 pip install -r ~/.requirements.txt
+
+# jupyter nbextensions
+jupyter contrib nbextension install --user
+jupyter nbextensions_configurator enable --user
 deactivate
 
 ~/.fzf/install --all
