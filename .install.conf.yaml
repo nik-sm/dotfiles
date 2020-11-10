@@ -26,6 +26,7 @@
     ~/.vimrc:
       force: true
     ~/.zshrc:
+    ~/.rbenv:
 
 - shell:
   - git submodule sync --recursive
