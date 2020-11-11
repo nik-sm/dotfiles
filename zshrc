@@ -36,7 +36,10 @@ ssh-add ~/.ssh/id_rsa
 source ~/.shell/aliases.sh
 
 PATH=$PATH:~/.local/bin
-PATH=$HOME:~/.rbenv/bin:$PATH
+
+# rbenv
+PATH=~/.rbenv/bin:~/.ruby-build/bin:$PATH
+eval "$(rbenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

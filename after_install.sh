@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 [[ $# -eq 1 ]] || { echo "missing arg: <home dir>" >&2; exit 1; }
 HOME=$1
-
-set -eux
 
 apt update -y
 xargs -a apt_packages.txt apt install -y

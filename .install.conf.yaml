@@ -33,3 +33,4 @@
   - git update-submodules
   - command -v python3 || apt install -y python3 
   - command -v pip3 || apt install -y python3-pip
+  - PREFIX=~/.ruby-build ~/.rbenv/plugins/ruby-build/install.sh
