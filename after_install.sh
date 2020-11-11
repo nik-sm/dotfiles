@@ -4,8 +4,9 @@ set -euo pipefail
 [[ $# -eq 1 ]] || { echo "missing arg: <home dir>" >&2; exit 1; }
 HOME=$1
 
-apt update -y
-xargs -a apt_packages.txt apt install -y
+echo "apt update and install packages..."
+apt update -qq
+xargs -a apt_packages.txt apt install -qq
 
 # global python packages
 python3 -m pip install virtualenv tldr
@@ -17,12 +18,14 @@ mkdir -p ~/.ssh
 chmod -R 700 ~/.ssh/
 
 # python packages for vim ALE
+echo "install python packages..."
 source ~/.venv/bin/activate
-pip install -r ~/.requirements.txt
+pip install --quiet -r ~/.requirements.txt
 
 # jupyter nbextensions
-jupyter contrib nbextension install --user
-jupyter nbextensions_configurator enable --user
+echo "install jupyter extensions..."
+jupyter contrib nbextension install --user --log-level='ERROR'
+jupyter nbextensions_configurator enable --user --log-level='ERROR'
 deactivate
 
 ~/.fzf/install --all
