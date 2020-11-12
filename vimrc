@@ -247,6 +247,7 @@ endfunction
 nmap <Leader>b :ALEFix<CR>
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
+let g:ale_virtualenv_dir_names = [$HOME . '/.venv']
 
 let g:ale_fixers = {
 \     '*': ['remove_trailing_lines', 'trim_whitespace'],
