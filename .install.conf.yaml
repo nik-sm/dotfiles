@@ -8,15 +8,18 @@
 - link:
     ~/.after_install.sh:
     ~/.bash_profile:
+      force: true
     ~/.bashrc:
       force: true
     ~/.config:
       force: true
     ~/.fzf:
+      force: true
     ~/.gitconfig:
       force: true
     ~/.inputrc:
     ~/.oh-my-zsh:
+      force: true
     ~/.requirements.txt:
     ~/.shell:
     ~/.tmux.conf:
@@ -26,6 +29,7 @@
     ~/.vimrc:
       force: true
     ~/.zshrc:
+      force: true
     ~/.rbenv:
 
 - shell:
