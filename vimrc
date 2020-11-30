@@ -122,6 +122,9 @@ set undoreload=10000
 "useful for :make, or <C-z>
 set autowrite
 
+" allows easy copy to tmux buffer by typing ":" before selecting
+set mouse=nvi
+
 " ex mode is basically useless, and we often get there accidentally, so disable it
 map q: <Nop>
 nnoremap Q <nop>

@@ -15,6 +15,7 @@
 
 [diff]
 	mnemonicPrefix = true
+  tool = vimdiff
 
 [color]
 	ui = auto
