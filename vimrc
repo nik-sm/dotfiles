@@ -265,3 +265,16 @@ let g:ale_linters = {
 
 " Keep gutter open always
 " let g:ale_sign_column_always = 1
+
+" FZF (https://github.com/junegunn/fzf/blob/master/README-VIM.md)
+set rtp+=~/.fzf
+" Example keybindings from (https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko)
+" nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
+" nnoremap <silent> <Leader>' :Marks<CR>
+" nnoremap <silent> <Leader>g :Commits<CR>
+" nnoremap <silent> <Leader>H :Helptags<CR>
+" nnoremap <silent> <Leader>hh :History<CR>
+" nnoremap <silent> <Leader>h: :History:<CR>
+" nnoremap <silent> <Leader>h/ :History/<CR> 
