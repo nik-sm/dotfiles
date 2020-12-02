@@ -91,7 +91,7 @@ set expandtab       " Expand TABs to spaces
 
 set hlsearch " After entering a search pattern, highlight all matches on screen
 "set incsearch " Jump instantly to next matching string, re-jumping after each keystroke
-set foldenable " allow folds
+" set foldenable " allow folds
 set foldopen-=block " when a fold is made, allow moving with "}" past the fold, without opening/deleting that fold
 
 " Together, these 2 options give a nice autocomplete behavior for ed 
@@ -166,6 +166,8 @@ set shell=bash
 
 " set behaviors to be invoked using :make
 autocmd Filetype python setlocal makeprg=python3\ %
+autocmd Filetype python set foldmethod=indent
+autocmd Filetype python set foldlevel=20
 autocmd Filetype ocaml setlocal makeprg=make\ clean\ test
 autocmd Filetype c setlocal makeprg=make\ clean\ test
 autocmd Filetype text,markdown setlocal nocindent
