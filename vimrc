@@ -74,7 +74,7 @@ nmap <C-a> :NERDTreeToggle<CR><C-w><C-p>
 
 
 
-color delek "Chosen so visual mode does not obscure text
+color desert "Chosen so visual mode does not obscure text
 " https://stackoverflow.com/questions/43814949/cant-read-when-vim-neovim-highlight-same-color-as-text
 
 

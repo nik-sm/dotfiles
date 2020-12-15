@@ -4,6 +4,8 @@ case $- in
       *) return;;
 esac
 
+ulimit -n 66535
+
 export VISUAL=vim
 export EDITOR=$VISUAL
 
