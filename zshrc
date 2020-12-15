@@ -42,11 +42,16 @@ PATH=$PATH:~/.local/bin
 PATH=~/.rbenv/bin:~/.ruby-build/bin:$PATH
 eval "$(rbenv init -)"
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+# opam configuration
+test -r /home/niklas/.opam/opam-init/init.zsh && . /home/niklas/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 if [ -f ~/.zshrc_local_after ]; then
       source ~/.zshrc_local_after
 fi
-
-# opam configuration
-test -r /home/niklas/.opam/opam-init/init.zsh && . /home/niklas/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

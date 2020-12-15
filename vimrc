@@ -72,11 +72,9 @@ nmap <C-a> :NERDTreeToggle<CR><C-w><C-p>
 "   endif
 " endfunction
 
-
-
-color desert "Chosen so visual mode does not obscure text
-" https://stackoverflow.com/questions/43814949/cant-read-when-vim-neovim-highlight-same-color-as-text
-
+colorscheme base16-default-dark
+let base16colorspace=256
+set termguicolors
 
 set backspace=indent,eol,start " using backspace in insert mode can now cross these additional boundaries
 set number " show line numbers
