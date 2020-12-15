@@ -72,9 +72,17 @@ nmap <C-a> :NERDTreeToggle<CR><C-w><C-p>
 "   endif
 " endfunction
 
-colorscheme base16-default-dark
-let base16colorspace=256
+
+if &term =~# '^screen'
+  " https://github.com/vim/vim/issues/3608
+  " fixes glitch? in colors when using vim with tmux
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
 set termguicolors
+
+colorscheme base16-default-dark
+color base16-default-dark
 
 set backspace=indent,eol,start " using backspace in insert mode can now cross these additional boundaries
 set number " show line numbers
