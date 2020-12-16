@@ -4,9 +4,7 @@ set -euo pipefail
 [[ $# -eq 1 ]] || { echo "missing arg: <home dir>" >&2; exit 1; }
 HOME=$1
 
-quietly() {
-  eval $@
-} > /dev/null 2>&1
+quietly() { $@; } > /dev/null 2>&1
 
 echo "install apt packages..."
 quietly apt update -y
