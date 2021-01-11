@@ -9,7 +9,7 @@ alias gb="git branch -avv"
 alias ga="git add"
 alias g="git"
 ggg() {
-  [[ -z $1 ]] && { echo "missing commit message" >&2; exit 1; }
+  [[ -z $1 ]] && { echo "missing commit message" >&2; return 1; }
   git add -u
   git commit -m $1
   git push
@@ -29,10 +29,24 @@ alias mv='mv -i'
 command -v rg > /dev/null && alias grep="rg"
 command -v fzf > /dev/null && alias fzf="fzf --height 40% --layout reverse --preview 'head -n10 {}' --preview-window down:10"
 cdl() {
-  [[ -z $1 ]] && { echo "missing destination message" >&2; exit 1; }
+  [[ -z $1 ]] && { echo "missing destination message" >&2; return 1; }
   cd $1
   ls -lah
 }
+test_cuda() {
+  deactivate > /dev/null 2>&1 || :
+  source ~/.venv/bin/activate
+  [[ $(python -c "import torch; print(torch.cuda.is_available())") -eq "True" ]]
+  result=$?
+  deactivate
+  if [[ $result -eq 0 ]]; then
+    echo cuda available
+  else
+    echo cuda not available
+  fi
+  return $result
+}
+quietly() { $@ ; } > /dev/null 2>&1
 
 
 
