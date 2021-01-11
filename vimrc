@@ -30,7 +30,8 @@ endfunction
 
 " nmap - set a key mapping from normal mode
 " open nerdtree and return to previous window
-nmap <C-a> :NERDTreeToggle<CR><C-w><C-p>
+" nmap <C-a> :NERDTreeToggle<CR><C-w><C-p>
+nmap <C-a> :NERDTreeToggle<CR>
 
 
 " """"""""""
