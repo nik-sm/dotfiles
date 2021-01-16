@@ -159,10 +159,10 @@ nnoremap # ?\<<C-R>=expand('<cword>')<CR>\><CR>
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 
-" Doesn't work yet ...
-"nmap <C-s> :Update<CR>
-"inoremap <C-s> <c-o>:Update<CR>
-"vmap <C-s> <esc>:w<CR>gv
+" <C-m> to save all buffers
+nmap <C-m> :wa<CR>
+inoremap <C-m> <c-o>:wa<CR>
+vmap <C-m> <esc>:wa<CR>gv
 
 ""when launching subshells using :shell or :i, use an interactive. Default value is shellcmdflag=-c
 set shell=bash
