@@ -51,11 +51,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# TODO - this leaves 1 lingering ssh-agent process per closed terminal session
-# any forwarded identities will still be available from those agents, which is a minor security risk
-eval `ssh-agent`
-ssh-add ~/.ssh/id_rsa
-
 # Golang
 # export PATH=$PATH:/usr/local/go/bin
 

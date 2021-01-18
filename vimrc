@@ -160,9 +160,9 @@ noremap <Leader>y "*y
 noremap <Leader>p "*p
 
 " <C-m> to save all buffers
-nmap <C-m> :wa<CR>
-inoremap <C-m> <c-o>:wa<CR>
-vmap <C-m> <esc>:wa<CR>gv
+" nmap <C-m> :wa<CR>
+" inoremap <C-m> <c-o>:wa<CR>
+" vmap <C-m> <esc>:wa<CR>gv
 
 ""when launching subshells using :shell or :i, use an interactive. Default value is shellcmdflag=-c
 set shell=bash

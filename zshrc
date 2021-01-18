@@ -32,9 +32,6 @@ PROMPT='%(?.%F{green}√.%F{red}%?)%f %F{blue}%m%f %B%F{240}%1~%f%b %F{yellow}%#
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-eval `ssh-agent`
-ssh-add ~/.ssh/id_rsa
-
 source ~/.shell/aliases.sh
 
 PATH=$PATH:~/.local/bin
