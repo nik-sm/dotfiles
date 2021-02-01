@@ -1,0 +1,56 @@
+Host csl
+    HostName bspiral.coe.neu.edu
+    Port 27
+    User nms
+    ProxyJump coe
+    ForwardX11 no
+
+# College of Engineering bastion host
+Host coe
+    HostName gateway.coe.neu.edu
+    User nms
+    ForwardX11 no
+
+Host goliath david
+    # HostName david.ccs.neu.edu
+    HostName 10.200.205.217
+    ProxyJump loginccs
+
+Host galileo
+    HostName galileo.ccs.neu.edu
+    ProxyJump loginccs
+
+Host loginccs
+    HostName login.ccs.neu.edu
+
+Host florence
+    HostName florence.ccs.neu.edu
+    ProxyJump loginccs
+
+Host discovery
+    User smedemark-margulie.n
+    HostName login.discovery.neu.edu
+
+Host discovery-xfer
+    User smedemark-margulie.n
+    HostName xfer.discovery.neu.edu
+
+Host github.com
+    HostName github.com
+    User nik-sm
+    ForwardX11 no
+    ClearAllForwardings yes
+
+Host *
+    User niklas
+    IdentityFile ~/.ssh/id_rsa
+    # Tensorboard
+    LocalForward 6006 127.0.0.1:6006
+    LocalForward 6007 127.0.0.1:6007
+    LocalForward 6008 127.0.0.1:6008
+
+    # Jupyter
+    LocalForward 8888 127.0.0.1:8888
+    LocalForward 8889 127.0.0.1:8889
+    LocalForward 8890 127.0.0.1:8890
+    # ForwardX11 yes

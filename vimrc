@@ -173,8 +173,8 @@ set shell=bash
 
 " set behaviors to be invoked using :make
 " autocmd Filetype python setlocal makeprg=python3\ %
-autocmd Filetype python set foldmethod=indent
-autocmd Filetype python set foldlevel=20
+" autocmd Filetype python set foldmethod=indent
+" autocmd Filetype python set foldlevel=20
 " zM close all folds
 " zR open all folds
 " zm close one level

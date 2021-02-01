@@ -31,6 +31,7 @@
     ~/.zshrc:
       force: true
     ~/.rbenv:
+    ~/.ssh:
 
 - shell:
   - git submodule sync --recursive
