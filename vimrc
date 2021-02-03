@@ -107,7 +107,8 @@ set wildmode=longest:full,full
 
 set lazyredraw
 set showmatch
-set cursorline " show an underline for the current cursor position
+set cursorline " hightlight cursor row
+set cursorcolumn " highlight cursor column
 set ruler " show file and line position info on bottom right
 set autoindent
 set smartindent
