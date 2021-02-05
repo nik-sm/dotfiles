@@ -48,6 +48,10 @@ test_cuda() {
 }
 quietly() { $@ ; } > /dev/null 2>&1
 
+catlast() {
+    [[ -z $1 ]] && { echo "missing target folder" >&2; return 1; }
+    cat $1/$(ls -Art $1/ | tail -n 1)
+}
 
 
 # Add an "alert" alias for long running commands.  Use like so:
