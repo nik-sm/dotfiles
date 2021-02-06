@@ -50,6 +50,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # opam configuration
 test -r /home/niklas/.opam/opam-init/init.zsh && . /home/niklas/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
+# C-U to delete until beginning of line
+bindkey \^U backward-kill-line
+
 if [ -f ~/.zshrc_local_after ]; then
       source ~/.zshrc_local_after
 fi
