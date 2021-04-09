@@ -14,7 +14,7 @@ git submodule update --init --recursive "${DOTBOT_DIR}"
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 
 if command -v sudo &> /dev/null; then
-  sudo bash after_install.sh ~
+  sudo bash after_install.sh ~ $(whoami)
 else
-  bash after_install.sh ~  # for Docker testing
+  bash after_install.sh ~ $(whoami) # for Docker testing
 fi

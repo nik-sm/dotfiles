@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-[[ $# -eq 1 ]] || { echo "missing arg: <home dir>" >&2; exit 1; }
+[[ $# -eq 2 ]] || { echo "required args: <home dir> <username>" >&2; exit 1; }
 HOME=$1
 
 quietly() { $@; } > /dev/null 2>&1
@@ -30,6 +30,8 @@ mkdir -p ~/.ssh
   ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N "";
 }
 chmod -R 700 ~/.ssh/
+chown -R $2 ~/.ssh/
+chgrp -R $2 ~/.ssh/
 
 echo "install fzf..."
 ~/.fzf/install --all > /dev/null 2>&1
