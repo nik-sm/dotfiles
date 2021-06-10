@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -uo pipefail
 
 [[ $# -eq 2 ]] || { echo "required args: <home dir> <username>" >&2; exit 1; }
 HOME=$1
@@ -8,7 +8,8 @@ quietly() { $@; } > /dev/null 2>&1
 
 echo "install apt packages..."
 quietly apt update -y
-quietly xargs -a apt_packages.txt apt install -y
+[[ $(command -v apt) ]] && quietly xargs -a apt_packages.txt apt install -y
+[[ $(command -v brew) ]] && quietly xargs -a apt_packages.txt brew install -y
 
 # python packages for vim ALE
 echo "install python packages..."
